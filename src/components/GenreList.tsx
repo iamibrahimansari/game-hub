@@ -4,7 +4,7 @@ import {
     ListItem,
     Image,
     Button,
-    Spinner,
+    // Spinner,
     Heading,
 } from "@chakra-ui/react";
 import useGenres, { Genre } from "../hooks/useGenres";
@@ -16,9 +16,9 @@ interface Props {
 }
 
 const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
-    const { data: genres, isLoading, error } = useGenres();
-    if (error) return null;
-    if (isLoading) return <Spinner />;
+    const { data: genres /*,isLoading, error*/ } = useGenres();
+    // if (error) return null;
+    // if (isLoading) return <Spinner />;
     return (
         <>
             <Heading fontSize="2xl" marginBottom={3}>
